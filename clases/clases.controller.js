@@ -16,7 +16,7 @@ exports.create = (req, res) => {
         aulas: req.body.aulas,
         dia: req.body.dia,
         horainicio: req.body.horainicio,
-        horafinal: req.body.horafinal,
+       horafinal: req.body.horafinal,
         docente: req.body.docente,
         materia: req.body.materia,
         nivel: req.body.nivel,
