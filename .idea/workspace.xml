@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="46f2a6ed-fcf8-4306-bbf2-55c9aaacaeab" name="Default Changelist" comment="" />
+    <list default="true" id="46f2a6ed-fcf8-4306-bbf2-55c9aaacaeab" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clases/usuarios.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/clases/usuarios.model.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1WopoOoECp4oRtX0jvFmrunRqg8" />
   <component name="ProjectViewState">
@@ -15,6 +22,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
@@ -41,10 +49,17 @@
       <option name="presentableId" value="Default" />
       <updated>1579825975137</updated>
       <workItem from="1579825976770" duration="1368000" />
+      <workItem from="1581000343587" duration="933000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="178" y="82" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581000917311">
+      <screen x="0" y="23" width="1280" height="732" />
+    </state>
+    <state x="178" y="82" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1280.732@0.23.1280.732" timestamp="1581000917311" />
   </component>
 </project>

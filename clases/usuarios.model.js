@@ -1,14 +1,40 @@
 const mongoose = require('mongoose');
 
 const UsuariosSchema = mongoose.Schema({
-    cedula:     String ,
-    nombres:    String ,
-    apellidos:  String ,
-    email:      String ,
-    idrol:      String ,
-    rol:        String ,
-    materias:   Array  ,
-    pass:       String
+    cedula: {
+      type: String,
+      required: true
+    },
+    nombres: {
+      type: String,
+      required: true
+    },
+
+    apellidos: {
+      type: String,
+      required: true
+    },
+    email: {
+      type: String,
+      required: true
+    },
+    nombres: {
+      type: String,
+      required: true
+    },
+    nombres: {
+      type: String,
+      required: true
+    },
+    rol: {
+      type: String,
+      default: "user",
+      enum: [ "user", "auditorio","admin","superadmin"]
+    },
+    pass: {
+      type: String,
+      required: true
+    }
     }, {
     timestamps: true
 });
