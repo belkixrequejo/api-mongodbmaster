@@ -3,7 +3,6 @@ const jwt = require("jsonwebtoken");
 const passport = require("passport");
 const Usuario =  require('./usuarios.model');
 
-
     // Create a register user(ADMIN, SUPER_ADMIN, USER,AUDITOR)
     const userRegister = async (userDets, role, res) => {
   try {
@@ -148,8 +147,40 @@ module.exports = {
   serializeUser
 };
 
+//Create new Usuario
+exports.create = (req, res) => {
+    // Request validation
+    if(!req.body) {
+        return res.status(400).send({
+            message: "Usuarios content can not be empty"
+        });
+    }
 
 
+    // Create a Usuario
+    const usuario= new Usuario({
+        cedula: req.body.cedula,
+        nombres: req.body.nombres || "Sin Nombre",
+        apellidos: req.body.apellidos,
+        email: req.body.email,
+        idrol: req.body.idrol,
+        rol: req.body.rol,
+        pass: req.body.pass,
+        materias: req.body.materias
+    });
+
+    //Save Usuario in the database
+    usuario.save(
+            console.log('Usuario created!')
+    )
+    .then(usuario => {
+        res.send(usuario);
+    }).catch(err => {
+        res.status(500).send({
+            message: err.message || "Something wrong while creating the usuario."
+        });
+    });
+};
 
 // Retrieve all usuarios from the database.
 exports.findAll = (req, res) => {
@@ -196,7 +227,7 @@ exports.update = (req, res) => {
 
     // Find and update product with the request body
     Usuario.findOneAndUpdate({cedula: req.params.cedula}, {
-        cedula: req.body.cedula,
+       cedula: req.body.cedula,
         nombres: req.body.nombres || "Sin Nombre",
         apellidos: req.body.apellidos,
         email: req.body.email,

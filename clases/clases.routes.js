@@ -1,4 +1,3 @@
-
 module.exports = (app) => {
     const aulas = require('./aulas.controller');
     const clases = require('./clases.controller.js');
