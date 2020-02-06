@@ -1,7 +1,7 @@
 const Haulas = require('./aulas.model.js');
 
 
-//Create new Product
+//Create new  producto
 exports.create = (req, res) => {
     // Request validation
     if(!req.body) {
