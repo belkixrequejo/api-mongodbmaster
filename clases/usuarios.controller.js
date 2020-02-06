@@ -2,7 +2,6 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const passport = require("passport");
 const Usuario =  require('./usuarios.model');
-const { SECRET } = require("../config");
 
 
     // Create a register user(ADMIN, SUPER_ADMIN, USER,AUDITOR)
@@ -84,9 +83,7 @@ const userLogin = async (userCreds, role, res) => {
           apellidos:  user.apellidos,
         email: user.email,
 
-      },
-      SECRET,
-      { expiresIn: "7 days" }
+      }
     );
 
     let result = {
@@ -152,37 +149,7 @@ module.exports = {
 };
 
 
-//Create new Usuario
-exports.create = (req, res) => {
-    // Request validation
-    if(!req.body) {
-        return res.status(400).send({
-            message: "Usuarios content can not be empty"
-        });
-    }
 
-    const usuario= new Usuario({
-        cedula: req.body.cedula,
-        nombres: req.body.nombres || "Sin Nombre",
-        apellidos: req.body.apellidos,
-        email: req.body.email,
-        rol: req.body.rol,
-        pass: req.body.pass,
-        materias: req.body.materias
-    });
-
-    //Save Usuario in the database
-    usuario.save(
-            console.log('Usuario created!')
-    )
-    .then(usuario => {
-        res.send(usuario);
-    }).catch(err => {
-        res.status(500).send({
-            message: err.message || "Something wrong while creating the usuario."
-        });
-    });
-};
 
 // Retrieve all usuarios from the database.
 exports.findAll = (req, res) => {
