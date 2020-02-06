@@ -1,35 +1,95 @@
-module.exports = (app) => {
-    const clases = require('./clases.controller.js');
-    const usuarios = require('./usuarios.controller.js');
+const router = require("express").Router();
+// Bring in the User Registration function
+const {
+  userAuth,
+  userLogin,
+  checkRole,
+  userRegister,
+  serializeUser
+} = require("../clases/usuarios.controller");
 
-    // Create a new Materia
-    app.post('/class', clases.create);
+// user Registeration Route
+router.post("/register-user", async (req, res) => {
+  await userRegister(req.body, "user", res);
+});
 
-    // Retrieve all Materias
-    app.get('/class', clases.findAll);
+//auditorio Registration Route
+router.post("/register-auditorio", async (req, res) => {
+  await userRegister(req.body, "auditorio", res);
+});
+// Super Admin Registration Route
+router.post("/register-admin", async (req, res) => {
+  await userRegister(req.body, "admin", res);
+});
 
-    // Retrieve a single Materia with idmateria
-    app.get('/class/:idmateria', clases.findOne);
+// Super Admin Registration Route
+router.post("/register-super-admin", async (req, res) => {
+  await userRegister(req.body, "superadmin", res);
+});
 
-    // Update a Materia with idmateria
-    app.put('/class/update/:idmateria', clases.update);
+// User Login Route
+router.post("/login-user", async (req, res) => {
+  await userLogin(req.body, "user", res);
+});
 
-    // Delete a Materia with idmateria
-    app.delete('/class/delete/:idmateria', clases.delete);
+// Student Login Route
+router.post("/login-auditorio", async (req, res) => {
+  await userLogin(req.body, "auditorio", res);
+});
+//  Admin Login Route
+router.post("/login-admin", async (req, res) => {
+  await userLogin(req.body, "admin", res);
+});
+// Super Admin Login Route
+router.post("/login-super-admin", async (req, res) => {
+  await userLogin(req.body, "superadmin", res);
+});
+
+// Profile Route
+router.get("/profile", userAuth, async (req, res) => {
+  return res.json(serializeUser(req.user));
+});
+
+// Users Protected Route
+router.get(
+  "/user-protectd",
+  userAuth,
+  checkRole(["user"]),
+  async (req, res) => {
+    return res.json("Hello user");
+  }
+);
+
+// Admin Protected Route
+router.get(
+  "/auditorio-protectd",
+  userAuth,
+  checkRole(["auditorio"]),
+  async (req, res) => {
+    return res.json("Hello auditorio");
+  }
+);
+
+//  Admin Protected Route
+router.get(
+  "/admin-protectd",
+  userAuth,
+  checkRole(["admin"]),
+  async (req, res) => {
+    return res.json("Hello Admin");
+  }
+);
+
+// Super Admin Protected Route
+router.get(
+  "/super-admin-protectd",
+  userAuth,
+  checkRole(["superadmin"]),
+  async (req, res) => {
+    return res.json("Super admin");
+  }
+);
+
+module.exports = router;
 
 
-    // Create a new Usuarios
-    app.post('/usuarios', usuarios.create);
-
-    // Retrieve all Usuarios
-    app.get('/usuarios', usuarios.findAll);
-
-    // Retrieve a single Usuarios with cedula
-    app.get('/usuarios/:cedula', usuarios.findOne);
-
-    // Update a Usuarios with cedula
-    app.put('/usuarios/update/:cedula', usuarios.update);
-
-    // Delete a Usuarios with cedula
-    app.delete('/usuarios/delete/:cedula', usuarios.delete);
-}
