@@ -1,8 +1,10 @@
 const mongoose = require('mongoose');
+const HAulas = require('./aulas.model.js');
 
+const haulas = new HAulas();
 const HclasesSchema = mongoose.Schema({
     idmateria:      String ,
-    laboratorio:    String ,
+    aulas:          haulas ,
     dia:            String ,
     horainicio:     Date   ,
     horafinal:      Date   ,

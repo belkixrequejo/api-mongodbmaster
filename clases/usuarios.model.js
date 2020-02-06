@@ -9,7 +9,6 @@ const UsuariosSchema = mongoose.Schema({
       type: String,
       required: true
     },
-
     apellidos: {
       type: String,
       required: true

@@ -1,5 +1,6 @@
 const Hclases = require('./clases.model.js');
 
+
 //Create new Product
 exports.create = (req, res) => {
     // Request validation
