@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46f2a6ed-fcf8-4306-bbf2-55c9aaacaeab" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/clases/aulas.model.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clases/clases.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/clases/clases.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clases/clases.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/clases/clases.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clases/usuarios.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/clases/usuarios.controller.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/clases/usuarios.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/clases/usuarios.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +51,7 @@
       <option name="presentableId" value="Default" />
       <updated>1579825975137</updated>
       <workItem from="1579825976770" duration="1368000" />
-      <workItem from="1581000343587" duration="1625000" />
+      <workItem from="1581000343587" duration="6774000" />
     </task>
     <servers />
   </component>

@@ -13,8 +13,11 @@
   "author": "Belkix Requejo Micolta",
   "license": "MIT",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
-    "mongoose": "^5.4.2"
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.4.2",
+    "passport": "^0.4.1"
   }
 }

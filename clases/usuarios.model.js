@@ -17,14 +17,6 @@ const UsuariosSchema = mongoose.Schema({
       type: String,
       required: true
     },
-    nombres: {
-      type: String,
-      required: true
-    },
-    nombres: {
-      type: String,
-      required: true
-    },
     rol: {
       type: String,
       default: "user",
