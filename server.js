@@ -19,13 +19,12 @@ app.use(function(req, res, next) {
 // Configuring the database
 //const config = require('./config/config.js');
 const mongoose = require('mongoose');
-require('./clases/clases.routes.js')(app);
-
+require('./clases/user.routes.js')(app);
+require('./clases/routes');
 mongoose.Promise = global.Promise;
 
 // Connecting to the database
-mongoose.connect('mongodb+srv://belkix:Laboratorio2020@cluster0-htw36.mongodb.net/test?retryWrites=true&w=majority
- Co', {
+mongoose.connect('mongodb+srv://belkix:Laboratorio2020@cluster0-htw36.mongodb.net/test?retryWrites=true&w=majorityCo', {
     useNewUrlParser: true
 }).then(() => {
     console.log("Successfully connected to the database");    

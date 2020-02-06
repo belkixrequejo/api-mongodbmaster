@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46f2a6ed-fcf8-4306-bbf2-55c9aaacaeab" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/clases/aulas.controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clases/routes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clases/clases.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/clases/clases.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clases/clases.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/clases/user.routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +28,12 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/clases" />
+      <recent name="$PROJECT_DIR$/Router" />
+    </key>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -48,7 +58,7 @@
       <option name="presentableId" value="Default" />
       <updated>1579825975137</updated>
       <workItem from="1579825976770" duration="1368000" />
-      <workItem from="1581000343587" duration="9516000" />
+      <workItem from="1581000343587" duration="11470000" />
     </task>
     <servers />
   </component>
